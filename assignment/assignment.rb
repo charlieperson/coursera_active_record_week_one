@@ -61,12 +61,14 @@ class Assignment
   # Get rows from DB by PK
   #
   def get_user_byid(id)
+      User.find(id)
       # accept an id input parameter
       # use the User Model class to get the User associated with the `id` primary key
       # return the User instance that matches the provided id
   end
 
   def get_todolist_byid(id)
+      TodoList.find(id)
       # accept an id input parameter
       # use the TodoList Model class to get the TodoList associated with the `id` primary key
       # return the TodoList instance that matches the provided id
@@ -76,12 +78,14 @@ class Assignment
   # Update rows in DB
   #
   def update_password(id, password_digest)
+      User.find(id).update(password_digest: password_digest)
       # accept an id and password_digest input parameters
       # use the User Model class to update the `password_digest` for the User associated with the id primary key
       # (no return is required)
   end
 
   def update_listname(id, name)
+    TodoList.find(id).update(list_name: name)
       # accept an id and name input parameters
       # use the TodoList Model class to update the `list_name` for the TodoList associated with id primary key
       # (no return is required)
@@ -91,12 +95,14 @@ class Assignment
   # Delete rows from DB
   #
   def delete_user(id)
+      User.find(id).delete
       # accept an id input parameter
       # use the User Model class to remove the User associated with the `id` primary key from the database
       # (no return is required)
   end
 
   def delete_todolist(id)
+      TodoList.find(id).delete
       # accept an id input parameter
       # use the TodoList Model class to remove the TodoList associated with the `id` primary key.
       # (no return is required)
