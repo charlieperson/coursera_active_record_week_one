@@ -42,7 +42,7 @@ The functional goal of this assignment is to implement CRUD behavior for four (4
 
 4. TodoItem
 
-Functional Requirements
+Requirements:
 
 1. Create several Active Record Model classes
 
